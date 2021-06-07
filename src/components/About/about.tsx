@@ -18,6 +18,7 @@ export default class About extends Component<any,any>{
             <div>
                 <Panel>
                     <div className={styles.topleft}>
+                        <StaticImage src='../../images/adam.jpg' alt='A picture of me'/>
                     </div>
                     <div className={styles.topright}>
                         <h1>About Me</h1>
@@ -36,10 +37,10 @@ export default class About extends Component<any,any>{
                     </div>
                     <div className={styles.bottomright}>
                         <div className={styles.aboutbottomrightleft}>
-                            <img src={svmtrain} alt="Training a svm"/>
+                            <StaticImage src='../../images/SVM_training' alt="Training a svm"/>
                         </div>
                         <div className={styles.aboutbottomrightright}>
-                            <img src={computervis} alt="Capturing my face using depth sensors"/>
+                            <StaticImage src='../../images/computer-vision' alt="Capturing my face using depth sensors"/>
                         </div>
                     </div>
                 
