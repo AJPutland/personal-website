@@ -1,0 +1,11 @@
+$background-color: #fafafa;
+
+
+.panel {
+    width: 100%;
+    background-color: $background-color;
+    height: 100px;
+
+    display: flex;
+    flex-direction: row;
+}
