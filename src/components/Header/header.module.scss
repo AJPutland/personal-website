@@ -1,0 +1,159 @@
+$background-color: rgba(51, 51, 51, 0.92);
+
+.header {
+    z-index: 99;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 48px;
+    position: fixed; /*added for ie support*/
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: 0.5s;
+    .title {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        margin: auto 0 auto 1vw;
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 20px;
+        color: white;
+        transition: color 0.2s ease-in-out;
+        outline: inherit;
+        cursor: pointer;
+        &:focus, &:visited, &:link, &:active {
+            text-decoration: none;
+        }
+    }
+}
+
+.toggled {
+    background-color:rgba(51, 51, 51, 1);
+    border-bottom:1px  solid white;
+}
+
+.linksList {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    align-items: center;
+    justify-content: space-between;
+
+    li {
+        list-style-type: none;
+        margin-left: 1vw;
+        img {
+            width: 25px;
+            filter: invert(41%);
+            &:hover{
+                filter: invert(100%);
+            }
+        }
+    }
+}
+
+.headerList {
+    display: flex;
+    margin: auto;
+    padding: 0 2vw 0 0;
+    font-size: 15px;
+    li {
+        list-style-type: none;
+        margin: 0 0 0 2vw;
+        button {
+            transition: color 0.2s ease-in-out;
+            background: none;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+             &:focus, &:visited, &:link, &:active {
+                text-decoration: none;
+            }
+        }
+    }
+}
+ .active{
+     color: white
+}
+.notactive{
+    color: grey;
+}
+
+.dropdownMenu {
+    width: 40px;
+    height: 100%;
+    display: none;
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    
+
+    span {
+        width:20px;
+        height:1px;
+        position:relative;
+        margin:7px 0;
+        display:block;
+        background:grey;
+        transition: 0.5s;
+        backface-visibility: hidden;
+
+    }
+
+    &:hover {
+        span {
+            background-color: white;
+        }
+    }
+
+    &.toggled {
+        span {
+            -webkit-transform: rotate(45deg) translateY(5.5px);
+            transform: rotate(45deg) translateY(5.5px);
+        
+        &:last-child {
+            -webkit-transform: rotate(-45deg) translateY(-5.5px);
+            transform: rotate(-45deg) translateY(-5.5px);
+        }}
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .headerList {
+        display: none;
+    }
+    .linksList {
+        display: none;
+    }
+    .dropdownMenu {
+        display: unset;
+    }
+  }
+
+  @media not all and (hover: none) {
+    .headerList {
+        li {
+            
+            button {
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+    .title {
+        &:hover {
+            color: white;
+        }
+    }
+ }

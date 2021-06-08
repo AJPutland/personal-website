@@ -1,5 +1,11 @@
 import React, { Component, createRef, MutableRefObject} from "react"
+import Header from '../components/Header/header'
+import Menu from '../components/Menu/menu'
 import About from '../components/About/about'
+import Projects from '../components/Projects/projects'
+import Contact from '../components/Contact/contact'
+import Layout from "../components/layout"
+import "./index.css"
 
 export type PageLocation = "about" | "projects" | "contact"
 
@@ -63,6 +69,12 @@ export interface HomeState {
   
     render() {
       return (
-        <About />
+        <Layout>
+          <Header {...this.state} toggleMenuFn={this.toggleMenuFn}/>
+          <Menu {...this.state} toggleMenuFn={this.toggleMenuFn}/>
+          <About />
+          <Projects refProp={this.state.projectsRef}/>
+          <Contact refProp={this.state.contactRef}/>
+        </Layout>
     );}
    }

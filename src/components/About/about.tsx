@@ -1,8 +1,17 @@
 import React,{Component} from 'react';
 import Panel from '../panel';
 import * as styles from './about.module.scss';
-import { StaticImage } from "gatsby-plugin-image"
-
+import adam from '../../images/adam.jpg';
+import svmtrain from '../../images/SVM_training.gif';
+import computervis from '../../images/computer-vision.gif'
+import tool from '../../images/tool.gif'
+import eye from '../../images/eye.gif'
+import print from '../../images/print.gif'
+import app from '../../images//app.gif'
+import toolpic from '../../images/tool_first.gif'
+import eyepic from '../../images/eye_first.gif'
+import printpic from '../../images/print_first.gif'
+import apppic from '../../images/app_first.gif'
 
 export default class About extends Component<any,any>{
 
@@ -15,36 +24,55 @@ export default class About extends Component<any,any>{
 
     render() {
         return (
-            <div>
-                <Panel>
-                    <div className={styles.topleft}>
-                        <StaticImage src='../../images/adam.jpg' alt='A picture of me'/>
+            <div id="about" className={styles.about}>
+                <div className={styles.abouttop}>
+                    <div className={styles.abouttopleft}>
+                        <img src={adam} alt={"me"}/>
                     </div>
-                    <div className={styles.topright}>
+                    <div className={styles.abouttopright}>
                         <h1>About Me</h1>
                         <p>Hi I'm Adam! I'm currently in my 4th year at the University of Southampton pursuing an MEng in Computer Science. In my free time you can find me tinkering with computers or gaming. I'm also an avid football geek and Arsenal FC supporter. </p>
                     </div>
-                </Panel>
-                <Panel>
-                    <div className={styles.bottomleft}>
+                </div>
+                <div className={styles.aboutbottom}>
+                    <div className={styles.aboutbottomleft}>
                         <h1>Interests</h1>
                         <ul>
-                            <li>Machine learning techniques</li>
-                            <li>Computer Vision</li>
-                            <li>App development</li>
-                            <li>Sustainability and environmental change</li>
+                            <li>
+                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:1})}>
+                                    <img src={this.state.MouseLoc===1 ? tool : toolpic} alt="A tool"/>
+                                    Machine learning techniques
+                                </div>
+                            </li>
+                            <li>
+                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:2})}>
+                                    <img src={this.state.MouseLoc===2 ? eye : eyepic} alt="An eye"/>
+                                    Computer Vision
+                                </div>
+                            </li>
+                            <li>
+                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:3})}>
+                                    <img src={this.state.MouseLoc===3 ? app : apppic} alt="An app" />
+                                    App development
+                                </div>
+                            </li>
+                            <li>
+                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:4})}>
+                                    <img src={this.state.MouseLoc===4 ? print : printpic} alt="The globe"/>
+                                    3D Printing
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                    <div className={styles.bottomright}>
+                    <div className={styles.aboutbottomright}>
                         <div className={styles.aboutbottomrightleft}>
-                            <StaticImage src='../../images/SVM_training' alt="Training a svm"/>
+                            <img src={svmtrain} alt="Training a svm"/>
                         </div>
                         <div className={styles.aboutbottomrightright}>
-                            <StaticImage src='../../images/computer-vision' alt="Capturing my face using depth sensors"/>
+                            <img src={computervis} alt="Capturing my face using depth sensors"/>
                         </div>
                     </div>
-                
-                </Panel>
+                </div>
             </div>
         );
     }

@@ -1,0 +1,55 @@
+.contact {
+    flex:1 1 auto;
+
+    p {
+        margin-top: 100px;
+        font-size: large;
+        margin-bottom: 50px;
+    }
+
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 4rem;
+}
+
+.left{
+    flex:1;
+    background-color: #fafafa;
+    margin:10px;
+
+    img{
+        margin:3rem;
+        width: 100px;
+    }
+}
+
+.middle{
+    flex:1;
+    background-color: #fafafa;
+    margin:10px;
+
+    img{
+        margin: 2rem;
+        width: 100px;
+    }
+}
+
+.right{
+    flex:1;
+    background-color: #fafafa;
+    margin:10px;
+
+    img{
+        margin: 2rem;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content{
+        flex-direction: column;
+    }
+  }
