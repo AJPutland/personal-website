@@ -24,7 +24,7 @@ export default class Contact extends Component<any,any>{
                             <h3>CV upon request</h3>
                         </div>
                     </div>
-                    <p>See the <a href="https://github.com/AJPutland/me">github repository</a> of this website</p>
+                    <p>See the <a href="https://github.com/AJPutland/personal-website">github repository</a> of this website</p>
             </div>
         );
     }

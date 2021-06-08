@@ -8,7 +8,7 @@ export default class Projects extends Component<any,any>{
                     <h1>Projects</h1>
                     <ul className={styles.projectList}>
                         <li className={styles.reactWebsite}>
-                            <a href="https://github.com/AJPutland/me">
+                            <a href="https://github.com/AJPutland/personal-website">
                                 <div className={styles.reactImage}/>
                                 <div className={styles.reactText}>
                                     <h2>This Website</h2>
