@@ -7,9 +7,9 @@ A simple personal portfolio website I built to talk about me and show off some p
 ---
 ## Tool used 🔧
 
-[GatsbyJS](https://www.gatsbyjs.org/) and [REACT](https://reactjs.org/)/
-[Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution /
-[Travis-CI](https://travis-ci.org/) for testing before deployment to Netlify /
+-[GatsbyJS](https://www.gatsbyjs.org/) and [REACT](https://reactjs.org/) 
+-[Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution 
+-[Travis-CI](https://travis-ci.org/) for testing before deployment to Netlify 
 
 This project is built such that pushing a Git commit will trigger Travis-CI tests and automatic deployment to Netlify. 
 
