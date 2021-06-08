@@ -4,7 +4,7 @@ A simple personal portfolio website I built to talk about me and show off some p
 
 ---
 
-## Tool used 🔧
+## Tools used 🔧
 
 * [**GatsbyJS**](https://www.gatsbyjs.org/) and [
 **REACT**](https://reactjs.org/)
