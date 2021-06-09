@@ -67,6 +67,15 @@ export interface HomeState {
     componentDidMount = () => {
       window.addEventListener('scroll',this.scrollListener,true)
     }
+
+    semanticWebData =  JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "email": "mailto:ajputland@gmail.com",
+      "image": "../images/adam.jpg",
+      "jobTitle": "Full Stack Software Engineer",
+      "name": "Adam Putland",
+      "url": "http://www.ajputland.com"})
   
     render() {
       return (
@@ -75,6 +84,7 @@ export interface HomeState {
             <meta charSet="utf-8"/>
             <meta name="description" content="Adam James Putland is a full stack developer with interests in machine learning, mobile development and computer vision."/>
             <title>Adam J. Putland</title>
+            <script type="application/ld+json">{this.semanticWebData}</script>
           </Helmet>
           <Header {...this.state} toggleMenuFn={this.toggleMenuFn}/>
           <Menu {...this.state} toggleMenuFn={this.toggleMenuFn}/>
