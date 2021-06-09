@@ -1,4 +1,5 @@
 import React, { Component, createRef, MutableRefObject} from "react"
+import { Helmet } from "react-helmet"
 import Header from '../components/Header/header'
 import Menu from '../components/Menu/menu'
 import About from '../components/About/about'
@@ -70,6 +71,11 @@ export interface HomeState {
     render() {
       return (
         <Layout>
+          <Helmet>
+            <meta charSet="utf-8"/>
+            <meta name="description" content="Adam James Putland is a full stack developer with interests in machine learning, mobile development and computer vision."/>
+            <title>Adam J. Putland</title>
+          </Helmet>
           <Header {...this.state} toggleMenuFn={this.toggleMenuFn}/>
           <Menu {...this.state} toggleMenuFn={this.toggleMenuFn}/>
           <About />

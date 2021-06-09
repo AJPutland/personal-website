@@ -31,7 +31,7 @@ export default class Header extends Component<HeaderProps,{}>{
                     <li><button className={this.props.pageLoc==="projects" ? styles.active:styles.notactive} onClick={() =>window.scroll({top: this.props.projectsRef.current.offsetTop-40, behavior:'smooth'})} >Projects</button></li>
                     <li><button className={this.props.pageLoc==="contact" ? styles.active:styles.notactive} onClick={() => window.scroll({top: this.props.contactRef.current.offsetTop-40, behavior:'smooth'})} >Contact</button></li>
                 </ul>
-                <button className={this.props.toggleMenu ? styles.dropdownMenu+' '+styles.toggled : styles.dropdownMenu} onClick={this.props.toggleMenuFn}>
+                <button className={this.props.toggleMenu ? styles.dropdownMenu+' '+styles.toggled : styles.dropdownMenu} onClick={this.props.toggleMenuFn} name="Toggle Menu">
                     <span />
                     <span />
                 </button>
