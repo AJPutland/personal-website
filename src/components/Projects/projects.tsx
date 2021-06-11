@@ -1,27 +1,35 @@
 import React,{Component} from 'react';
 import * as styles from './projects.module.scss';
 
+import ThisWebsitemp4 from '../../videos/ThisWebsite.mp4'
+import UsedCarsmp4 from '../../videos/UsedCarsEDAandML.mp4'
+
+
 export default class Projects extends Component<any,any>{
     render() {
         return (
               <div ref={this.props.refProp} id="projects" className={styles.projects}>
                     <h1>Projects</h1>
                     <ul className={styles.projectList}>
-                        <li className={styles.reactWebsite}>
-                            <a href="https://github.com/AJPutland/personal-website">
-                                <div className={styles.reactImage}/>
-                                <div className={styles.reactText}>
+                        <li>
+                            <a onMouseOver={() => document.getElementById("thisWebsite").play()} onMouseOut={() => {document.getElementById("thisWebsite").pause()}} href="https://github.com/AJPutland/personal-website">
+                                <video id="thisWebsite" loop muted playsInline>
+                                    <source src={ThisWebsitemp4} type="video/mp4"/>
+                                </video>
+                                <div className={styles.darkBackground}>
                                     <h2>This Website</h2>
-                                    <p>I built this website using React, Typescript and SASS, hosted using Github pages</p>
+                                    <p>I built this website using GatsbyJS and REACT, with automatic deployment to Netlify</p>
                                 </div>
                             </a>
                         </li>
-                        <li className={styles.usedCarsEDAandML}>
-                            <a href="https://github.com/AJPutland/UsedCarsEDAandML">
-                                <div className={styles.reactImage}/>
-                                <div className={styles.reactText}>
+                        <li>
+                            <a onMouseOver={() => document.getElementById("usedCars").play()} onMouseOut={() => {document.getElementById("usedCars").pause()}} href="https://github.com/AJPutland/UsedCarsEDAandML">
+                                <video id="usedCars" loop muted playsInline>
+                                    <source src={UsedCarsmp4} type="video/mp4"/>
+                                </video>
+                                <div className={styles.lightBackground}>
                                     <h2>Used Cars EDA and machine learning</h2>
-                                    <p>Repository of machine learning project to predict price of used cars</p>
+                                    <p>Repository of a machine learning project to predict the price of used cars</p>
                                 </div>
                             </a>
                         </li>

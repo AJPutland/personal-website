@@ -18,6 +18,29 @@
         height: 300px;
         margin-bottom: 3%;
         position: relative;
+        overflow: hidden;
+
+        video {
+            filter: blur(3px);//grayscale(80%);
+        }
+
+        div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: x-large;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        &:hover {
+            video {
+                filter: blur(0px)
+            }
+
+        }
     }
 }
 
@@ -26,65 +49,13 @@
     font-size: x-large;
 }
 
-.reactImage{
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    filter: blur(3px);//grayscale(80%);
-    transition: background-image 0.2s ease-in-out;
-    transition: filter 0.2s ease-in-out;
-}
-
-.reactText{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+.darkBackground {
     color: white;
-    font-size: x-large;
-    font-weight: bold;
-    box-sizing: border-box;
-    //background-color: rgba(0,0,0, 0.3);
 }
 
-.reactWebsite{
-    overflow: hidden;
-    .reactImage{
-        background-image: url("../../images/react-logo.png");
-    }
-    &:hover{
-        .reactImage{
-            background-image: url("../../images/react-code.gif");
-            filter: blur(0px)grayscale(0%);
-        }
-    }
-    &:focus, &:visited, &:link, &:active {
-        text-decoration: none;
-    }
+.lightBackground {
+    color: black;
 }
-
-.usedCarsEDAandML {
-    overflow: hidden;
-    .reactText {
-        color: black;
-    }
-
-    .reactImage{
-        background-image: url("../../images/UsedCarsEDAandMLfirst.png");
-    }
-    &:hover{
-        .reactImage{
-            background-image: url("../../images/UsedCarsEDAandML.gif");
-            filter: blur(0px)grayscale(0%);
-        }
-    }
-    &:focus, &:visited, &:link, &:active {
-        text-decoration: none;
-    }
-}
-
-
 
 @media screen and (max-width: 700px) {
     .projectList{

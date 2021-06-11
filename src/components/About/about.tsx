@@ -1,33 +1,33 @@
 import React,{Component} from 'react';
+import { StaticImage } from "gatsby-plugin-image"
 import Panel from '../panel';
 import * as styles from './about.module.scss';
-import adam from '../../images/adam.jpg';
-import svmtrain from '../../images/SVM_training.gif';
-import computervis from '../../images/computer-vision.gif'
-import tool from '../../images/tool.gif'
-import eye from '../../images/eye.gif'
-import print from '../../images/print.gif'
-import app from '../../images//app.gif'
-import toolpic from '../../images/tool_first.gif'
-import eyepic from '../../images/eye_first.gif'
-import printpic from '../../images/print_first.gif'
-import apppic from '../../images/app_first.gif'
+
+import compvismp4 from '../../videos/computer-vision.mp4'
+import compviswebm from '../../videos/computer-vision.webm'
+import SVMmp4 from '../../videos/SVM_training.mp4'
+import SVMwebm from '../../videos/SVM_training.webm'
+
+import eyemp4 from '../../videos/eye.mp4'
+import appmp4 from '../../videos/app.mp4'
+import printmp4 from '../../videos/print.mp4'
+import toolmp4 from '../../videos/tool.mp4'
 
 export default class About extends Component<any,any>{
-
-    constructor(props:any){
-        super(props)
-        this.state ={
-          MouseLoc: 0,
-        }
-      }
-
+    
     render() {
         return (
             <div id="about" className={styles.about}>
                 <div className={styles.abouttop}>
                     <div className={styles.abouttopleft}>
-                        <img src={adam} alt={"me"}/>
+                        <div>
+                        <StaticImage 
+                        src="../../images/adam.jpg" 
+                        alt = "A picture of me"
+                        placeholder="blurred"
+                        layout="fullWidth"
+                        />
+                        </div>
                     </div>
                     <div className={styles.abouttopright}>
                         <h1>About Me</h1>
@@ -39,37 +39,43 @@ export default class About extends Component<any,any>{
                         <h1>Interests</h1>
                         <ul>
                             <li>
-                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:1})}>
-                                    <img src={this.state.MouseLoc===1 ? tool : toolpic} alt="A tool"/>
-                                    Machine learning techniques
-                                </div>
+                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                    <source src={toolmp4} type="video/mp4"/>
+                                </video>
+                                Machine learning techniques
                             </li>
                             <li>
-                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:2})}>
-                                    <img src={this.state.MouseLoc===2 ? eye : eyepic} alt="An eye"/>
-                                    Computer Vision
-                                </div>
+                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                    <source src={eyemp4} type="video/mp4"/>
+                                </video>
+                               Computer Vision
                             </li>
                             <li>
-                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:3})}>
-                                    <img src={this.state.MouseLoc===3 ? app : apppic} alt="An app" />
-                                    App development
-                                </div>
+                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                    <source src={appmp4} type="video/mp4"/>
+                                </video>
+                                App development
                             </li>
                             <li>
-                                <div onMouseOut={() => this.setState({MouseLoc: 0})} onMouseOver={() => this.setState({MouseLoc:4})}>
-                                    <img src={this.state.MouseLoc===4 ? print : printpic} alt="The globe"/>
-                                    3D Printing
-                                </div>
+                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                    <source src={printmp4} type="video/mp4"/>
+                                </video>
+                               3D Printing
                             </li>
                         </ul>
                     </div>
                     <div className={styles.aboutbottomright}>
                         <div className={styles.aboutbottomrightleft}>
-                            <img src={svmtrain} alt="Training a svm"/>
+                            <video autoPlay loop muted playsInline>
+                                <source src={SVMwebm} type="video/webm"/>
+                                <source src={SVMmp4} type="video/mp4"/>
+                            </video>
                         </div>
                         <div className={styles.aboutbottomrightright}>
-                            <img src={computervis} alt="Capturing my face using depth sensors"/>
+                            <video autoPlay loop muted playsInline>
+                                <source src={compviswebm} type="video/webm"/>
+                                <source src={compvismp4} type="video/mp4"/>
+                            </video>
                         </div>
                     </div>
                 </div>
