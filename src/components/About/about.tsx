@@ -24,12 +24,11 @@ export default class About extends Component<any,any>{
                         <StaticImage 
                         src="../../images/adam.jpg" 
                         alt = "A picture of me"
-                        placeholder="blurred"
+                        placeholder="none"
                         layout="fullWidth"
                         aspectRatio={1/1}
                         style={{width:"auto", margin:"auto"}}
                         imgStyle={{width:"auto", margin:"auto"}}
-                        placeholderStyle= {{width:"auto", margin:"auto"}}
                         />
                         </div>
                     </div>
