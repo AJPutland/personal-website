@@ -27,6 +27,7 @@ export default class About extends Component<any,any>{
                         placeholder="blurred"
                         layout="fullWidth"
                         aspectRatio={1/1}
+                        imgClassName={styles.selfPhoto}
                         />
                         </div>
                     </div>
