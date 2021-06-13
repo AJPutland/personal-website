@@ -29,6 +29,7 @@ export default class About extends Component<any,any>{
                         aspectRatio={1/1}
                         style={{width:"auto", margin:"auto"}}
                         imgStyle={{width:"auto", margin:"auto"}}
+                        placeholderStyle= {{width:"auto", margin:"auto"}}
                         />
                         </div>
                     </div>
