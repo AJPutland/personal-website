@@ -27,7 +27,8 @@ export default class About extends Component<any,any>{
                         placeholder="blurred"
                         layout="fullWidth"
                         aspectRatio={1/1}
-                        imgClassName={styles.selfPhoto}
+                        style={{width:"auto", margin:"auto"}}
+                        imgStyle={{width:"auto", margin:"auto"}}
                         />
                         </div>
                     </div>
