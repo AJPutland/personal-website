@@ -39,25 +39,25 @@ export default class About extends Component<any,any>{
                         <h1>Interests</h1>
                         <ul>
                             <li>
-                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                <video disableRemotePlayback onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
                                     <source src={toolmp4} type="video/mp4"/>
                                 </video>
                                 Machine learning techniques
                             </li>
                             <li>
-                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                <video disableRemotePlayback onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
                                     <source src={eyemp4} type="video/mp4"/>
                                 </video>
                                Computer Vision
                             </li>
                             <li>
-                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                <video disableRemotePlayback onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
                                     <source src={appmp4} type="video/mp4"/>
                                 </video>
                                 App development
                             </li>
                             <li>
-                                <video onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
+                                <video disableRemotePlayback onMouseOver={e => e.target.play()} onMouseOut={e => {e.target.currentTime=0; e.target.pause()}} loop muted playsInline>
                                     <source src={printmp4} type="video/mp4"/>
                                 </video>
                                3D Printing
@@ -66,13 +66,13 @@ export default class About extends Component<any,any>{
                     </div>
                     <div className={styles.aboutbottomright}>
                         <div className={styles.aboutbottomrightleft}>
-                            <video autoPlay loop muted playsInline>
+                            <video disableRemotePlayback autoPlay loop muted playsInline>
                                 <source src={SVMwebm} type="video/webm"/>
                                 <source src={SVMmp4} type="video/mp4"/>
                             </video>
                         </div>
                         <div className={styles.aboutbottomrightright}>
-                            <video autoPlay loop muted playsInline>
+                            <video disableRemotePlayback autoPlay loop muted playsInline>
                                 <source src={compviswebm} type="video/webm"/>
                                 <source src={compvismp4} type="video/mp4"/>
                             </video>

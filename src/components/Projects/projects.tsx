@@ -13,7 +13,7 @@ export default class Projects extends Component<any,any>{
                     <ul className={styles.projectList}>
                         <li>
                             <a onMouseOver={() => document.getElementById("thisWebsite").play()} onMouseOut={() => {document.getElementById("thisWebsite").pause()}} href="https://github.com/AJPutland/personal-website">
-                                <video id="thisWebsite" loop muted playsInline>
+                                <video disableRemotePlayback id="thisWebsite" loop muted playsInline>
                                     <source src={ThisWebsitemp4} type="video/mp4"/>
                                 </video>
                                 <div className={styles.darkBackground}>
@@ -24,7 +24,7 @@ export default class Projects extends Component<any,any>{
                         </li>
                         <li>
                             <a onMouseOver={() => document.getElementById("usedCars").play()} onMouseOut={() => {document.getElementById("usedCars").pause()}} href="https://github.com/AJPutland/UsedCarsEDAandML">
-                                <video id="usedCars" loop muted playsInline>
+                                <video disableRemotePlayback id="usedCars" loop muted playsInline>
                                     <source src={UsedCarsmp4} type="video/mp4"/>
                                 </video>
                                 <div className={styles.lightBackground}>
