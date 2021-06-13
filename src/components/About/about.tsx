@@ -26,6 +26,7 @@ export default class About extends Component<any,any>{
                         alt = "A picture of me"
                         placeholder="blurred"
                         layout="fullWidth"
+                        aspectRatio={1/1}
                         />
                         </div>
                     </div>
