@@ -23,7 +23,7 @@ export default class Projects extends Component<any,any>{
                             </a>
                         </li>
                         <li>
-                            <a onMouseOver={() => document.getElementById("usedCars").play()} onMouseOut={() => {document.getElementById("usedCars").pause()}} href="https://github.com/AJPutland/UsedCarsEDAandML">
+                            <a onMouseOver={() => document.getElementById("usedCars").play()} onMouseOut={() => {document.getElementById("usedCars").pause()}} href="https://github.com/AJPutland/used-cars-ML">
                                 <video disableRemotePlayback id="usedCars" loop muted playsInline>
                                     <source src={UsedCarsmp4} type="video/mp4"/>
                                 </video>
