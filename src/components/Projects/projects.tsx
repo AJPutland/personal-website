@@ -17,7 +17,7 @@ export default class Projects extends Component<any,any>{
                                     <source src={ThisWebsitemp4} type="video/mp4"/>
                                 </video>
                                 <div className={styles.darkBackground}>
-                                    <h2>This Website</h2>
+                                    <h2>personal-website</h2>
                                     <p>I built this website using GatsbyJS and REACT, with automatic deployment to Netlify</p>
                                 </div>
                             </a>
@@ -28,8 +28,8 @@ export default class Projects extends Component<any,any>{
                                     <source src={UsedCarsmp4} type="video/mp4"/>
                                 </video>
                                 <div className={styles.lightBackground}>
-                                    <h2>Used Cars EDA and machine learning</h2>
-                                    <p>Repository of a machine learning project to predict the price of used cars</p>
+                                    <h2>used-cars-ML</h2>
+                                    <p>A machine learning project to predict the price of used cars on craigslist</p>
                                 </div>
                             </a>
                         </li>
