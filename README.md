@@ -12,4 +12,4 @@ A simple personal portfolio website I built to talk about me and show off some p
 * [**Netlify**](https://www.netlify.com) for continuous deployment, and CDN distribution 
 * [**Travis-CI**](https://travis-ci.org/) for testing before deployment to Netlify 
 
-This project is built such that pushing a Git commit will trigger Travis-CI tests and automatic deployment to Netlify. 
+This project is built such that pushing a Git commit will trigger a Travis-CI build and automatic deployment to Netlify. 
