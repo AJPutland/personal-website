@@ -34,7 +34,7 @@ export default class About extends Component<any,any>{
                     </div>
                     <div className={styles.abouttopright}>
                         <h1>About Me</h1>
-                        <p>Hi I'm Adam! I'm currently in my 4th year at the University of Southampton pursuing an MEng in Computer Science. In my free time you can find me tinkering with computers or gaming. I'm also an avid football geek and Arsenal FC supporter. </p>
+                        <p>Hi I'm Adam! I'm a full stack developer and Computer Science gradaute from the University of Southampton. In my free time you can find me tinkering with computers or gaming. I'm also an avid football geek and Arsenal FC supporter. </p>
                     </div>
                 </div>
                 <div className={styles.aboutbottom}>

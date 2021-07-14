@@ -3,6 +3,7 @@ import * as styles from './projects.module.scss';
 
 import ThisWebsitemp4 from '../../videos/ThisWebsite.mp4'
 import UsedCarsmp4 from '../../videos/UsedCarsEDAandML.mp4'
+import Carbio from '../../videos/carbio.mp4'
 
 
 export default class Projects extends Component<any,any>{
@@ -33,7 +34,17 @@ export default class Projects extends Component<any,any>{
                                 </div>
                             </a>
                         </li>
-                        <li className={styles.more}><h2>More coming soon...</h2></li>
+                        <li>
+                            <a onMouseOver={() => document.getElementById("carbio").play()} onMouseOut={() => {document.getElementById("carbio").pause()}} href="https://github.com/AJPutland/carbio">
+                                <video disableRemotePlayback id="carbio" loop muted playsInline>
+                                    <source src={Carbio} type="video/mp4"/>
+                                </video>
+                                <div className={styles.lightBackground}>
+                                    <h2>carbio</h2>
+                                    <p>An Android meal app for type 1 diabetics to help carb counting and calculating insulin ratios</p>
+                                </div>
+                            </a>
+                        </li>
                         <li className={styles.more}><h2>More coming soon...</h2></li>
                     </ul>
                 </div>
