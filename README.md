@@ -13,3 +13,7 @@ A simple personal portfolio website I built to talk about me and show off some p
 * [**Travis-CI**](https://travis-ci.org/) for testing before deployment to Netlify 
 
 This project is built such that pushing a Git commit will trigger a Travis-CI build and automatic deployment to Netlify. 
+
+## TODO
+- [ ] Add UI library (Material, Rebass)
+- [ ] Use Gatsby graphql plugin for fetching site data (from markdown files, github)
